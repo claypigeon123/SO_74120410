@@ -1,0 +1,14 @@
+version: '3.7'
+services:
+  book-service-postgres:
+    image: postgres:15-alpine
+    environment:
+      - POSTGRES_PASSWORD=12345
+      - POSTGRES_DB=reactive
+    ports:
+      - "5432:5432"
+
+  adminer:
+    image: adminer
+    ports:
+      - "19000:8080"

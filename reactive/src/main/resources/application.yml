@@ -1,0 +1,17 @@
+server:
+  port : 8083
+spring:
+  data:
+    r2dbc:
+      repositories:
+        enabled: true
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/loadtestdb
+    username: postgres
+    password: 12345
+    properties:
+      schema: public
+    pool:
+      max-size: 100
+      initial-size: 50
+      enabled: true
