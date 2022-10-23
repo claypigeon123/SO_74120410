@@ -4,7 +4,7 @@ services:
     image: postgres:15-alpine
     environment:
       - POSTGRES_PASSWORD=12345
-      - POSTGRES_DB=reactive
+      - POSTGRES_DB=loadtestdb
     ports:
       - "5432:5432"
 
